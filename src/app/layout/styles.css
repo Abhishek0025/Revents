@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 /* .App-logo {
   height: 40vmin;
@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 } */
+
+body{
+  background-color: #eaeaea;
+}
+
+.ui.fixed.menu {
+  background-image: linear-gradient(135deg, rgb(24,42,115) 0%, rgb(33,138,174) 69%, rgb(32,167,172) 89%);
+
+}
+
+.ui.main.container{
+  margin-top: 7em;
+}
