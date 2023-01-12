@@ -8,7 +8,7 @@ export default function App() { // In React, we write a function and return jsx.
   // const title = React.createElement('h1', {}, 'Revents no JSX')
   // const div = React.createElement('div',{className: 'App'},title)
 
-  const [formOpen, setFormOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(true);
 
   return (
     <> 
