@@ -8,17 +8,28 @@ export default function App() { // In React, we write a function and return jsx.
   // const title = React.createElement('h1', {}, 'Revents no JSX')
   // const div = React.createElement('div',{className: 'App'},title)
 
-  const [formOpen, setFormOpen] = useState(true);
+  const [formOpen, setFormOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
+  function handleSelectEvent(event){
+    setSelectedEvent(event);
+    setFormOpen(true);
+}
+
+  function handleCreateFormOpen(){
+    setSelectedEvent(null);
+    setFormOpen(true);
+}
 
   return (
     <> 
-      <NavBar setFormOpen={setFormOpen}/>
+      <NavBar setFormOpen={handleCreateFormOpen}/>
       {/* <button className='ui icon red button'>
         <i className='user icon'/>CSS button
       </button>
       <Button icon='user' content='React Button' color='green' loading='True' /> */}
       <Container className='main'>
-        <EventDashboard formOpen={formOpen} setFormOpen={setFormOpen}/>
+        <EventDashboard formOpen={formOpen} setFormOpen={setFormOpen} selectEvent= {handleSelectEvent} selectedEvent={selectedEvent}/>
       </Container>
     </>
   );
